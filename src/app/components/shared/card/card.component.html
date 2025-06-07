@@ -1,10 +1,9 @@
 <mat-card (click)="goToDetail()" class="cursor-pointer animate__animated animate__fadeIn">
-    <mat-card-header>
-      <mat-card-title>{{ image.author }}</mat-card-title>
-    </mat-card-header>
-    <img mat-card-image [src]="image.download_url" alt="Imatge" />
-    <mat-card-content>
-      <p>ID: {{ image.id }}</p>
-    </mat-card-content>
-  </mat-card>
-  
+  <mat-card-header>
+    <mat-card-title>{{ image.name }}</mat-card-title>
+  </mat-card-header>
+  <img mat-card-image [src]="'https://ddragon.leagueoflegends.com/cdn/13.10.1/img/champion/' + image.image.full" alt="Champion" />
+  <mat-card-content>
+    <p>Title: {{ image.title }}</p>
+  </mat-card-content>
+</mat-card>

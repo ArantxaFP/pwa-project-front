@@ -1,8 +1,15 @@
 export interface Image {
-  id: string;
-  author: string;
-  width: number;
-  height: number;
-  url: string;
-  download_url: string;
+  id: string;               // Nom del campió de LoL
+  name: string;             // Nom complet del campió
+  title: string;            // Títol del campió
+  blurb: string;            // Descripció curta
+  image: {
+    full: string;           // Nom del fitxer d'imatge (ex: "Aatrox.png")
+    sprite: string;
+    group: string;
+    x: number;
+    y: number;
+    w: number;
+    h: number;
+  };
 }

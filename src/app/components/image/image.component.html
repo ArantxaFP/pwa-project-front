@@ -1,39 +1,36 @@
 <div class="container mt-5 animate__animated animate__fadeIn" *ngIf="image">
   
   <div class="d-flex justify-content-between align-items-center mb-4">
-    <h2 class="mb-0"><strong>ID:</strong> {{ image.id }}</h2>
+    <h2 class="mb-0"><strong>Name:</strong> {{ image.name }}</h2>
     <a class="btn btn-outline-danger btn-sm" routerLink="/">Back</a>
   </div>
 
   <div class="text-center mb-3">
-    <img [src]="image.download_url"
-         alt="Image"
+    <img [src]="'https://ddragon.leagueoflegends.com/cdn/13.10.1/img/champion/' + image.image.full"
+         alt="{{ image.name }}"
          class="img-thumbnail shadow-sm"
          style="max-width: 500px; height: auto;">
   </div>
 
-  <!-- Botó per mostrar els detalls -->
   <div class="text-center mb-3">
     <button mat-stroked-button color="primary" (click)="toggleDetails()">
       {{ showDetails ? 'Hide' : 'Show' }} all details
     </button>
   </div>
 
-  <!-- Expansion panel amb detalls -->
   <div class="mx-auto" style="max-width: 600px;" *ngIf="showDetails">
     <mat-expansion-panel expanded class="animate__animated animate__slideInUp">
       <mat-expansion-panel-header>
         <mat-panel-title>
-          Image Details
+          Champion Details
         </mat-panel-title>
       </mat-expansion-panel-header>
 
       <div class="p-2">
         <p><strong>ID:</strong> {{ image.id }}</p>
-        <p><strong>Author:</strong> {{ image.author }}</p>
-        <p><strong>Width:</strong> {{ image.width }}</p>
-        <p><strong>Height:</strong> {{ image.height }}</p>
-        <p><strong>URL:</strong> <a [href]="image.url" target="_blank">{{ image.url }}</a></p>
+        <p><strong>Name:</strong> {{ image.name }}</p>
+        <p><strong>Title:</strong> {{ image.title }}</p>
+        <p><strong>Blurb:</strong> {{ image.blurb }}</p>
       </div>
     </mat-expansion-panel>
   </div>

@@ -33,15 +33,15 @@
 
   "dataGroups": [
     {
-      "name": "images-api",
+      "name": "lol-data-dragon-api",
       "urls": [
-        "https://picsum.photos/**"
+        "https://ddragon.leagueoflegends.com/**"
       ],
       "cacheConfig": {
-        "maxSize": 10,
-        "maxAge": "1h",
-        "timeout": "1s",
-        "strategy": "freshness"
+        "maxSize": 20,
+        "maxAge": "6h",
+        "timeout": "3s",
+        "strategy": "performance"
       }
     }
   ]
