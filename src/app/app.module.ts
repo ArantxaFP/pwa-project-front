@@ -17,8 +17,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { CardComponent } from './Components/shared/card/card.component';
-import { GridComponent } from './Components/shared/grid/grid.component';
+import { CardComponent } from './components/shared/card/card.component';
+import { GridComponent } from './components/shared/grid/grid.component';
 
 @NgModule({
   declarations: [
