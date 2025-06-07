@@ -1,0 +1,15 @@
+<table class="table table-hover animate__animated animate__fadeIn">
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Author</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let image of images" (click)="goToDetail(image.id)" style="cursor:pointer;">
+        <td>{{ image.id }}</td>
+        <td>{{ image.author }}</td>
+      </tr>
+    </tbody>
+  </table>
+  

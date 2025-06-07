@@ -1,0 +1,36 @@
+<div class="container mt-4">
+  <!-- Botons de canvi de vista -->
+  <div style="text-align: right; margin-bottom: 16px;">
+    <button 
+      mat-icon-button 
+      (click)="changeView('cards')" 
+      aria-label="Canvia a vista de targetes"
+      matTooltip="Vista de targetes">
+      <mat-icon>view_module</mat-icon>
+    </button>
+
+    <button 
+      mat-icon-button 
+      (click)="changeView('table')" 
+      aria-label="Canvia a vista de taula"
+      matTooltip="Vista de taula">
+      <mat-icon>view_list</mat-icon>
+    </button>
+  </div>
+
+  <div *ngIf="loading" class="text-center mt-5">
+    <mat-spinner></mat-spinner>
+  </div>
+
+  <!-- Vista en cards -->
+  <div *ngIf="!loading && viewMode === 'cards'" class="row mt-4">
+    <div class="col-md-4 mb-3" *ngFor="let image of images">
+      <app-card [image]="image"></app-card>
+    </div>
+  </div>
+
+  <!-- Vista en taula -->
+  <div *ngIf="!loading && viewMode === 'table'">
+    <app-grid [images]="images"></app-grid>
+  </div>
+</div>
