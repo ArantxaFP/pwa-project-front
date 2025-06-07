@@ -7,6 +7,8 @@ export const environment = {
   apiUrl: 'https://ddragon.leagueoflegends.com/cdn/15.11.1/data/en_US/champion.json'
 };
 
+// Aquí es veuen les versions disponibles de la api https://ddragon.leagueoflegends.com/api/versions.json
+
 /*
  * For easier debugging in development mode, you can import the following file
  * to ignore zone related error stack frames such as `zone.run`, `zoneDelegate.invokeTask`.
