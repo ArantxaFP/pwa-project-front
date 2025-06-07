@@ -1,5 +1,5 @@
 import { Component, Input } from '@angular/core';
-import { Image } from 'src/app/models/image.interface';
+import { Image } from 'src/app/modelss/image.interface';
 import { Router } from '@angular/router';
 
 @Component({

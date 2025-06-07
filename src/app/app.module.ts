@@ -6,8 +6,8 @@ import { ServiceWorkerModule } from '@angular/service-worker';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
-import { ImageComponent } from './components/image/image.component';
-import { ImagesComponent } from './components/images/images.component';
+import { ImageComponent } from './componentss/image/image.component';
+import { ImagesComponent } from './componentss/images/images.component';
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -17,8 +17,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatIconModule } from '@angular/material/icon';
 import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
-import { CardComponent } from './components/shared/card/card.component';
-import { GridComponent } from './components/shared/grid/grid.component';
+import { CardComponent } from './componentss/shared/card/card.component';
+import { GridComponent } from './componentss/shared/grid/grid.component';
 
 @NgModule({
   declarations: [

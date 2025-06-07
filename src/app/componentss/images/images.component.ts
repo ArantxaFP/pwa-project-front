@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Image } from 'src/app/models/image.interface';
-import { ImagesService } from 'src/app/services/images.service';
+import { Image } from 'src/app/modelss/image.interface';
+import { ImagesService } from 'src/app/servicess/images.service';
 
 @Component({
   selector: 'app-images',
