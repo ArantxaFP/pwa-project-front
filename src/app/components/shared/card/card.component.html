@@ -2,7 +2,7 @@
   <mat-card-header>
     <mat-card-title>{{ image.name }}</mat-card-title>
   </mat-card-header>
-  <img mat-card-image [src]="'https://ddragon.leagueoflegends.com/cdn/15.11.1/img/champion/' + image.image.full" alt="Champion" loading="lazy" />
+  <img mat-card-image [src]="'https://ddragon.leagueoflegends.com/cdn/15.11.1/img/champion/' + image.image.full" alt="Champion" loading="lazy" fetchpriority="high" />
   <mat-card-content>
     <p>Title: {{ image.title }}</p>
   </mat-card-content>
