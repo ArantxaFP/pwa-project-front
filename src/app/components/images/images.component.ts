@@ -9,6 +9,9 @@ import { ImagesService } from 'src/app/services/images.service';
 })
 export class ImagesComponent implements OnInit {
   images: Image[] = [];
+  visibleImages: Image[] = [];
+  itemsPerPage = 21;
+  currentPage = 1;
   loading: boolean = true;
   viewMode: 'cards' | 'table' = 'cards'; 
 
@@ -29,8 +32,31 @@ export class ImagesComponent implements OnInit {
   ngOnInit(): void {
     this.imagesService.getAllImages().subscribe((images) => {
       this.images = images;
+      this.loadMore();  
       this.loading = false;
     });
+
+    window.addEventListener('scroll', this.onScroll.bind(this));
+  }
+
+  ngOnDestroy(): void {
+    window.removeEventListener('scroll', this.onScroll.bind(this));
+  }
+
+  loadMore() {
+    const start = 0;
+    const end = this.currentPage * this.itemsPerPage;
+    this.visibleImages = this.images.slice(0, end);
+    this.currentPage++;
+  }
+
+  onScroll(): void {
+    if (
+      window.innerHeight + window.scrollY >= document.body.offsetHeight - 200 &&
+      this.visibleImages.length < this.images.length
+    ) {
+      this.loadMore();
+    }
   }
 
   changeView(mode: 'cards' | 'table') {

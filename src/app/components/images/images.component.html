@@ -18,11 +18,9 @@
 
   <!-- Vista en cards -->
   <div *ngIf="!loading && viewMode === 'cards'" class="row mt-4">
-    <cdk-virtual-scroll-viewport itemSize="420" style="height: 100vh; width: 100%;">
-      <div *cdkVirtualFor="let image of images" class="col-md-4 mb-3">
-        <app-card [image]="image"></app-card>
-      </div>
-    </cdk-virtual-scroll-viewport>
+    <div class="col-md-4 mb-3" *ngFor="let image of visibleImages">
+      <app-card [image]="image"></app-card>
+    </div>
   </div>
 
 

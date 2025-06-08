@@ -4,7 +4,6 @@ import { HttpClientModule } from '@angular/common/http';
 import { RouterModule } from '@angular/router';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment'; 
-import { ScrollingModule } from '@angular/cdk/scrolling';
 
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
@@ -36,7 +35,6 @@ import { GridComponent } from './components/shared/grid/grid.component';
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
-    ScrollingModule,
     MatCardModule,
     MatButtonToggleModule,
     MatProgressSpinnerModule,
