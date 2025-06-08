@@ -43,6 +43,18 @@
         "timeout": "3s",
         "strategy": "performance"
       }
+    },
+    {
+      "name": "riot-images",
+      "urls": [
+        "https://ddragon.leagueoflegends.com/cdn/**"
+      ],
+      "cacheConfig": {
+        "strategy": "performance",
+        "maxSize": 100,
+        "maxAge": "30d",
+        "timeout": "5s"
+      }
     }
   ]
 }
